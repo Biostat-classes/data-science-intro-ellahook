@@ -1,7 +1,7 @@
 ---
 title: "2. Intro to Rmd files and literate programming"
-author: "stephen's example"
-date: "Last compiled on 29 July, 2022 10:47"
+author: "Ella"
+date: "Last compiled on 12 July, 2024 13:52"
 output:
   html_document:
     toc: true
@@ -15,7 +15,7 @@ Rmd files differ from R files in that they combine regular text with code chunks
 This is a code chunk
 
 
-```r
+``` r
 print("this is a chunk")
 ```
 
@@ -55,7 +55,7 @@ note you can press the green button next to an R chunk.
 
 
 
-```r
+``` r
 print("this is a chunk")
 ```
 
@@ -96,7 +96,7 @@ Remember you can press the green button to see the output in the console without
 knitting!)
 
 
-```r
+``` r
 x <- 5:15
 ```
 
@@ -135,7 +135,7 @@ THESE COMMANDS. Then state what each of these does.
 You can read in a dataset from the internet following this protocol.
 
 
-```r
+``` r
 sleep <- read.csv("http://raw.githubusercontent.com/jsgosnell/CUNY-BioStats/master/datasets/sleep.csv", stringsAsFactors = T)
 ```
 
@@ -158,7 +158,7 @@ Primate column, which is full of "Yes"s and "No"s, reads in as words and R doesn
 know how to plot them. There are many ways to handle this. You can modify the 
 read.csv command (add  stringsAsFactors = T option), eg
 
-```r
+``` r
 sleep <- read.csv("http://raw.githubusercontent.com/jsgosnell/CUNY-BioStats/master/datasets/sleep.csv", stringsAsFactors = T)
 ```
 If you do this, you'll need to rechange anything you previously updated to the
@@ -168,21 +168,21 @@ You can also modify a single column for the
 actual object 
 
 
-```r
+``` r
 sleep$Primate <- factor (sleep$Primate)
 ```
 
 or for a single command, eg (plot not actually shown!)
 
 
-```r
+``` r
 plot(BodyWt ~ factor(Primate), data = sleep)
 ```
 
 
 NOTE YOU CAN ADD A PLOT TO THE DOCUMENT TOO! AMEND THE BELOW AS NEEDED.  
 
-```r
+``` r
 plot(cars)
 ```
 
